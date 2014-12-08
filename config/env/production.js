@@ -9,5 +9,5 @@ module.exports = {
     dbUsername: PRIVATE.db.username,
     dbPassword: PRIVATE.db.password,
     db: "mongodb://" + username + ":" + password + "@" + host + "/" + database, port: 9000,
-    enterprise_url: PRIVATE.enterprise_url
+    enterprise_url: PRIVATE.db.enterprise_url
 }

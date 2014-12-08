@@ -20,6 +20,7 @@ var db = mongoose.connect(config.db, function (err) {
 
 });
 
+// express demo
 var web = function(port){
     var app = express()
     app.get('/', function (req, res) {
