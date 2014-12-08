@@ -11,10 +11,12 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
  */
 var express = require('express');
 var config = require('./config/config');
+var op = require('./op');
 
 // config
+var app = express()
 var port = process.env.NODE_PORT || config.port;
-var PRIVATE = require('./config/ private')
+var PRIVATE = require('./config/private')
 var qiniu = require('qiniu')
 qiniu.conf.ACCESS_KEY = PRIVATE.qiniu.ACCESS_KEY
 qiniu.conf.SECRET_KEY = PRIVATE.qiniu.SECRET_KEY
@@ -23,15 +25,17 @@ var db = mongoose.connect(config.db, function (err) {
     if (err) throw err;
 
     // Operation
+    op(qiniu, mongoose, app);
+
+
+    // Demo
     qiniuOp(qiniu, 'ghxz');
     dbOp(mongoose);
-    web(port);
-
+    web(app, port);
 });
 
 // express demo
-var web = function (port) {
-    var app = express()
+var web = function (app, port) {
     app.get('/', function (req, res) {
         res.send('Hello World!')
     })
