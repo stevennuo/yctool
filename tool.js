@@ -15,8 +15,11 @@ var mongoose = require('mongoose');
 var db = mongoose.connect(config.db, function (err) {
     if (err) throw err;
     var port = process.env.NODE_PORT || config.port;
+    var qiniu = config.qiniu;
 
-    web(port);
+    //qiniuOp(qiniu, 'ghxz');
+
+    //web(port);
 
 });
 
@@ -35,4 +38,20 @@ var web = function(port){
         console.log('Example app listening at http://%s:%s', host, port)
 
     })
+}
+
+// qiniu demo
+var qiniuOp = function(qiniu, bucket){
+    var client = new qiniu.rs.Client();
+    var marker = null;
+    qiniu.rsf.listPrefix(bucket, '', marker, 100, function(err, ret) {
+        if (!err) {
+            // process ret.marker & ret.items
+            console.log(ret.marker);
+            console.log(ret.items);
+        } else {
+            console.log(err)
+            // http://docs.qiniu.com/api/file-handle.html#list
+        }
+    });
 }
