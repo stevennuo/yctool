@@ -18,6 +18,7 @@
   "homepage": "https://github.com/stevennuo/yctool",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.10.0",
     "express": "^4.10.4",
     "mongoose": "^3.8.20",
     "qiniu": "^6.1.6",

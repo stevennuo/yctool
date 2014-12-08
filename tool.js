@@ -10,11 +10,14 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
  * Module dependencies.
  */
 var express = require('express');
+var bodyParser = require('body-parser');
 var config = require('./config/config');
 var op = require('./op');
 
 // config
 var app = express()
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 var port = process.env.NODE_PORT || config.port;
 var PRIVATE = require('./config/private')
 var qiniu = require('qiniu')

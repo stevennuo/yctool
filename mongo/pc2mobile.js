@@ -24,8 +24,8 @@ while ( ccour.hasNext() ) {
                 var activity = db.activities.find({_id:task.activities[k]},{name:1,videos:1}).next();
 
                 // video
-                var video = db.videos.find({_id:activity.videos[0]},{video:1}).next();
-                activity.url = video.video.url;
+                var video = db.videos.find({_id:activity.videos[0]},{video:1, url:1}).next();
+                activity.url = video.url;
                 activity.videoId = video._id;
 
                 activity.seq = NumberInt(++count);
