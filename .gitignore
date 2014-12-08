@@ -32,4 +32,4 @@ config/private.js
 
 # Mac
 .idea
-config/private.js
+.DS_Store
