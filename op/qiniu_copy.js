@@ -9,7 +9,7 @@ module.exports = function(qiniu, mongoose){
     copy('mothership',  'yc-course',        'Activity', 'icon', qiniu,  mongoose)
 }
 
-var copy = function (qiniu, mongoose, SRC, DEST, COLL, FIELD) {
+var copy = function (SRC, DEST, COLL, FIELD, qiniu, mongoose) {
     var query = {};
     query[FIELD] = String;
     var model = mongoose.model(COLL, query);
