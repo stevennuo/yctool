@@ -1,7 +1,7 @@
 'use strict';
 
 var host = 'localhost',
-    database = 'yangcong-dev';
+    database = 'import';
 
 module.exports = {
     host: host,
