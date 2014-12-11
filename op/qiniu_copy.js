@@ -2,24 +2,34 @@
  * Created by 3er on 12/8/14.
  */
 
-module.exports = function (qiniu, mongoose) {
-    var Chapter = mongoose.model('Chapter', {icon: String})
-    Chapter.find({}, function (err, docs) {
+
+module.exports = function(qiniu, mongoose){
+    copy('mothership',  'yc-course-video',  'Video',    'url',  qiniu,  mongoose)
+    copy('mothership',  'yc-course',        'Chapter',  'icon', qiniu,  mongoose)
+    copy('mothership',  'yc-course',        'Activity', 'icon', qiniu,  mongoose)
+}
+
+var copy = function (qiniu, mongoose, SRC, DEST, COLL, FIELD) {
+    var query = {};
+    query[FIELD] = String;
+    var model = mongoose.model(COLL, query);
+    model.find({}, function (err, docs) {
         if (err) throw err
 //        console.log(docs.toString())
         var copyPairs = []
         var deletePairs = []
         docs.forEach(function (doc) {
-            var keys = (/^http:\/\/mothership\.qiniudn\.com\/(.*)/g).exec(doc.icon);
+            // TODO:
+            var keys = (/^http:\/\/mothership\.qiniudn\.com\/(.*)/g).exec(doc[FIELD]);
             var key = keys ? keys[1] : null;
             if (key) {
                 console.log(key)
                 copyPairs.push(new qiniu.rs.EntryPathPair(
-                    new qiniu.rs.EntryPath('mothership', key),
-                    new qiniu.rs.EntryPath('yc-course', key)
+                    new qiniu.rs.EntryPath(SRC, key),
+                    new qiniu.rs.EntryPath(DEST, key)
                 ));
-                deletePairs.push(new qiniu.rs.EntryPath('yc-course', key))
-                doc.icon = "http://yc-course.qiniudn.com/" + key
+                deletePairs.push(new qiniu.rs.EntryPath(DEST, key))
+                doc[FIELD] = 'http://'+DEST+'.qiniudn.com/' + key
                 doc.save();
             }
         });

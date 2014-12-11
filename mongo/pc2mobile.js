@@ -2,7 +2,7 @@
 db.mobiles.drop();
 db.createCollection("mobiles");
 
-var ccour = db.chapters.find({},{name:1,icon:1,seq:1,topics:1});
+var ccour = db.chapters.find({},{name:1,icon:1,seq:1,topics:1, intro:1});
 while ( ccour.hasNext() ) {
     var chapter = ccour.next();
 
@@ -24,7 +24,7 @@ while ( ccour.hasNext() ) {
                 var activity = db.activities.find({_id:task.activities[k]},{name:1,videos:1}).next();
 
                 // video
-                var video = db.videos.find({_id:activity.videos[0]},{video:1, url:1}).next();
+                var video = db.videos.find({_id:activity.videos[0]}).next();
                 activity.url = video.url;
                 activity.videoId = video._id;
 
@@ -44,6 +44,17 @@ while ( ccour.hasNext() ) {
     chapter.count = NumberInt(videoCount);
     chapter.url = chapter.icon;
     delete chapter.icon;
+
+
+    if(chapter.intro){
+        chapter.video = {};
+        var video = db.videos.find({_id:chapter.intro}).next();
+        chapter.video.videoId = video._id;
+        chapter.video.name = video.name;
+        chapter.video.url = video.url;
+        delete chapter.intro;
+    }
+
 
     db.mobiles.save(chapter);
 }

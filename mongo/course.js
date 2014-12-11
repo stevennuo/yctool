@@ -1,5 +1,5 @@
 var chapters = [{
-    "chapter":"有理数", "array":[
+    "chapter":"有理数", "intro":"53c64b832e2c21e836470973", "array":[
         {"topic":"负数的定义","pre":{"activities":[{"name":"负数的定义","id":"53c64bc02e2c21e836470974"}]}},
         {"topic":"有理数的概念和分类","pre":{"activities":[{"name":"有理数的概念和分类","id":"53c64c082e2c21e836470975"}]}},
         {"topic":"数轴","pre":{"activities":[{"name":"数轴","id":"53c64c5f2e2c21e836470976"}]}},
@@ -28,7 +28,7 @@ var chapters = [{
         {"topic":"有理数的四则及乘方混合运算","pre":{"activities":[{"name":"有理数的四则及乘方混合运算顺序","id":"53d870d5af3249f2747d702b"}]},"special":{"activities":[{"name":"有理数的四则及乘方混合运算","id":"53c733a32e2c21e8364709a4"}]}},
         {"topic":"科学记数法","pre":{"activities":[{"name":"科学记数法","id":"53c72b562e2c21e836470985"}]}}
     ]},{
-    "chapter":"整式的加减", "array":[
+    "chapter":"整式的加减", "intro":"53e1cab26a3401fd615be2fe", "array":[
         {"topic":"符号语言和书写规范","pre":{"activities":[{"name":"文字语言化符号语言","id":"53e877c6fba13fad32b92911"}]},"special":{"activities":[{"name":"书写规范","id":"53e87831fba13fad32b92912"}]}},
         {"topic":"单项式","pre":{"activities":[{"name":"单项式","id":"53e990e3fba13fad32b92a91"}]},"special":{"activities":[{"name":"判断单项式","id":"53e990f7fba13fad32b92a92"}]}},
         {"topic":"单项式的系数与次数","pre":{"activities":[{"name":"单项式的系数与次数","id":"53e99112fba13fad32b92a93"}]},"special":{"activities":[{"name":"单项式的系数与次数","id":"53e9912efba13fad32b92a94"}]}},
@@ -42,7 +42,7 @@ var chapters = [{
         {"topic":"整体代入","pre":{"activities":[{"name":"添括号与整体代入","id":"53eb34de1cb4aae95a4b2f84"}]}},
         {"topic":"找规律","pre":{"activities":[{"name":"又掌握了一门新的外语","id":"541934a0a5f980790573e790"}]}}
     ]},{
-    "chapter":"一元一次方程", "array":[
+    "chapter":"一元一次方程", "intro":"5433aa61b70f2e237c5e5d1c", "array":[
         {"topic":"方程与一元一次方程","pre":{"activities":[
             {"name":"方程与一元一次方程","id":"5433aa8fb97968317c5af31b"}]},"special":{"activities":[
             {"name":"判断一元一次方程","id":"5433aa93b97968317c5af31d"},
@@ -58,7 +58,7 @@ var chapters = [{
             {"name":"变差怪题","id":"543b8ece3bfd788a03c64432"}]}},
         {"topic":"带你围观应用题下","pre":{"activities":[{"name":"带你围观应用题下","id":"543b8ec13bfd788a03c640b6"}]},"special":{"activities":[{"name":"对等怪题","id":"543b8ed44d4d5b8803f1f1c5"}]}}
     ]},{
-    "chapter":"实数", "array":[
+    "chapter":"实数", "intro":"546480d96dc71d4122c8b135", "array":[
         {"topic":"平方根","pre":{"activities":[{"name":"平方根","id":"546480fc137e48c722de8ff2"}]}},
         {"topic":"算数平方根","pre":{"activities":[
             {"name":"算数平方根","id":"54648103e0d39bdc2251368f"}]},"special":{"activities":[
@@ -71,7 +71,7 @@ var chapters = [{
             {"name":"无理数的估算和比来比去","id":"546481a26dc71d4122c8b1b8"},
             {"name":"无理数的整数部分和小数部分","id":"546481afa727825d224b2f5d"}]}}
     ]},{
-    "chapter":"三角形", "array":[
+    "chapter":"三角形", "intro":"5397173818cfdd1f6e716c41", "array":[
         {"topic":"三角形的分类","pre":{"activities":[{"name":"三角形的概念","id":"538fe2a576cb8a0068b14035"}]}},
         {"topic":"三角形的三边关系","pre":{"activities":[{"name":"三角形的三边关系","id":"539000fa76cb8a0068b14143"}]}},
         {"topic":"三角形的高","pre":{"activities":[{"name":"三角形的高","id":"5390642eea8348a718c80a4b"}]}},
@@ -90,7 +90,7 @@ var chapters = [{
         {"topic":"多边形内角和","pre":{"activities":[{"name":"多边形内角和","id":"53944e5644abf25b20f635eb"}]}},
         {"topic":"多边形外角和","pre":{"activities":[{"name":"多边形外角和","id":"53966359b8233b3704e37e04"}]}}
     ]},{
-    "chapter":"全等三角形", "array":[
+    "chapter":"全等三角形", "intro":"539fb9b14353b42976e62d74", "array":[
         {"topic":"全等三角形的性质","pre":{"activities":[{"name":"全等三角形的性质","id":"53a107984353b42976e62dba"}]}},
         {"topic":"边边边判定定理（SSS）","pre":{"activities":[{"name":"边边边判定定理（SSS）","id":"53a10b654353b42976e62de3"}]}},
         {"topic":"边角边判定定理（SAS）","pre":{"activities":[{"name":"边角边判定定理（SAS）","id":"53b129224e02f85b4d60fd0b"}]}},
@@ -102,7 +102,7 @@ var chapters = [{
         {"topic":"全等模型—边"},
         {"topic":"全等模型—角"}
     ]},{
-    "chapter":"整式的乘法与因式分解", "array":[
+    "chapter":"整式的乘法与因式分解", "intro":"54059540ef73b666603a6916", "array":[
         {"topic":"同底数幂的乘法","pre":{"activities":[{"name":"同底数幂的乘法","id":"54059542ef73b666603a6917"}]}},
         {"topic":"幂的乘方","pre":{"activities":[{"name":"幂的乘方","id":"54059547ef73b666603a691a"}]},"special":{"activities":[{"name":"坑之同底数幂的乘法和幂的乘方","id":"5421168de61af7db487ec522"}]}},
         {"topic":"积的乘方","pre":{"activities":[{"name":"积的乘方","id":"54059551ef73b666603a691d"}]},"special":{"activities":[{"name":"来一起回到小学做巧算吧！","id":"5421169fda44c9e148cd0264"}]}},
@@ -122,7 +122,7 @@ var chapters = [{
             {"name":"十字相乘法进阶","id":"542294eebe3a5e4d770c36b1"}
         ]}}
     ]},{
-    "chapter":"分式", "array":[
+    "chapter":"分式", "intro":"543e2cf84dc9606c1eb3af52", "array":[
         {"topic":"分式的概念","pre":{"activities":[{"name":"分式的概念","id":"543e2cfac8cb2d6e1e97b6ca"}]},"special":{"activities":[{"name":"有意义与值为0","id":"5446015299fd66b33bd78614"}]}},
         {"topic":"分式的基本性质","pre":{"activities":[{"name":"分式的基本性质","id":"544601546ac7c5b93b5b0718"}]},"special":{"activities":[{"name":"分式的基本性质","id":"54460157aa3a66c03b2bfb9f"}]}},
         {"topic":"分式的约分与通分","pre":{"activities":[
@@ -142,7 +142,7 @@ var chapters = [{
         {"topic":"分式方程","pre":{"activities":[{"name":"分式方程","id":"543e2d0c4dc9606c1eb3af56"}]},"special":{"activities":[{"name":"分式方程的解","id":"543e2d10c8cb2d6e1e97b6ce"}]}},
         {"topic":"分式方程应用题","pre":{"activities":[{"name":"分式方程应用题","id":"5446000ebb5bd69a3b46167c"}]}}
     ]},{
-    "chapter":"二次根式", "array":[
+    "chapter":"二次根式", "intro":"548509c2646dec1624f04d96", "array":[
         {"topic":"二次根式的定义","pre":{"activities":[{"name":"二次根式的定义","id":"5476e112202eece7320da6a1"}]},"special":{"activities":[{"name":"有意义与非负性","id":"5476e11746c0e3ab3248e49f"}]}},
         {"topic":"根的方与方的根","pre":{"activities":[{"name":"根的方与方的根","id":"5476e114964f88c932a64b27"}]},"special":{"activities":[{"name":"二次根式性质应用","id":"5476e119202eece7320da6a2"}]}},
         {"topic":"二次根式的乘法","pre":{"activities":[{"name":"二次根式的乘法","id":"5476e140f4978ef632cb4eef"}]},"special":{"activities":[{"name":"根式化简怪题","id":"5476e14446c0e3ab3248e7b8"}]}},
@@ -192,17 +192,19 @@ var foo = function(task, taskid, chapter){// create topics
         var activityid = activity.id;
         var lesson = locateLesson(chapter, activityid);
         var video = locateActivity(lesson, "video");
-        video.url = video.video.url;
         var problem = locateActivity(lesson, "gonggu");
         db.tasks.update({_id:taskid},{$push:{activities:lesson._id}});
         db.activities.save({_id:lesson._id, name:activity.name, seq: NumberInt(i+1),
             //lesson: lesson,
-            videos: [video._id],
+            videos: [ObjectId(video.video._id)],
             task: taskid});
         if(lesson.summary_img){
             db.activities.update({_id:lesson._id},{$set:{icon: lesson.summary_img}});
         }
-        db.videos.save(video);
+        db.videos.save({_id:ObjectId(video.video._id), url:video.video.url, name: activity.name});
+        if(video.problems && video.problems.length > 0){
+            db.videos.update({_id:ObjectId(video.video._id)},{$set:{problems: video.problems}});
+        }
 
         if(problem){
             db.problems.insert(problem.problems);
@@ -219,13 +221,28 @@ var foo = function(task, taskid, chapter){// create topics
 
 
 for (var i=0,  loc=chapters.length; i < loc; i++) {
-    var cursor = db.course.find({"name":chapters[i].chapter},{_id:1,name:1,description:1, bimg:1, layers:1});
+    var cursor = db.courses.find({"name":chapters[i].chapter},{_id:1,name:1,description:1, bimg:1, layers:1});
     while ( cursor.hasNext() ) {
         chapter = cursor.next();
 
         // create chapters
         db.chapters.save({_id:chapter._id, name:chapter.name, desc: chapter.description,
             seq: NumberInt(i+1), icon: chapter.bimg, topics:[] });
+
+
+        var chapintrlesn = locateLesson(chapter, chapters[i].intro);
+        if(chapintrlesn){
+            var chapintract = locateActivity(chapintrlesn, "video");
+            var video = chapintract.video;
+            db.videos.save({_id:ObjectId(video._id), url:video.url, name:chapintrlesn.title});
+            if(chapintract.problems && chapintract.problems.length > 0){
+                db.videos.update({_id:ObjectId(video._id)},{$set:{problems: chapintract.problems}});
+            }
+            db.chapters.update({_id:chapter._id},{$set:{intro: ObjectId(video._id)}});
+        }
+
+
+
 
         // create topics
         for (var j=0,  lot=chapters[i].array.length; j < lot; j++) {
