@@ -21,6 +21,8 @@ while ( ccour.hasNext() ) {
 
             // activities
             for(var k=0, lact=task.activities.length; k<lact; k++){
+
+                // TODO: 修改名称，加入【基础】【提高】
                 var activity = db.activities.find({_id:task.activities[k]},{name:1,videos:1}).next();
 
                 // video
@@ -53,6 +55,7 @@ while ( ccour.hasNext() ) {
         chapter.video.name = video.name;
         chapter.video.url = video.url;
         delete chapter.intro;
+        chapter.count++;
     }
 
 

@@ -17,7 +17,8 @@ var op = require('./op');
 // config
 var app = express()
 app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.
+    urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 var port = process.env.NODE_PORT || config.port;
 var PRIVATE = require('./config/private')
 var qiniu = require('qiniu')
@@ -32,8 +33,8 @@ var db = mongoose.connect(config.db, function (err) {
 
 
     // Demo
-    qiniuOp(qiniu, 'ghxz');
-    dbOp(mongoose);
+    //qiniuOp(qiniu, 'ghxz');
+    //dbOp(mongoose);
     web(app, port);
 });
 
@@ -63,9 +64,9 @@ var qiniuOp = function (qiniu, bucket) {
 
 // mongoose demo
 var dbOp = function (mongoose) {
-    var User = mongoose.model('User', { name: String })
-    User.findOne({}, function (err, doc) {
-        if (err) throw err;
-        console.log(doc.toString())
+    var Chapter = mongoose.model('Chapter',{})
+    Chapter.find({}, function (err, docs) {
+        if (err) throw err
+        console.log(docs.toString())
     })
 }

@@ -5,8 +5,8 @@
 
 module.exports = function(qiniu, mongoose){
     copy('mothership',  'yc-course-video',  'Video',    'url',  qiniu,  mongoose)
-    copy('mothership',  'yc-course',        'Chapter',  'icon', qiniu,  mongoose)
-    copy('mothership',  'yc-course',        'Activity', 'icon', qiniu,  mongoose)
+//    copy('mothership',  'yc-course',        'Chapter',  'icon', qiniu,  mongoose)
+//    copy('mothership',  'yc-course',        'Activity', 'icon', qiniu,  mongoose)
 }
 
 var copy = function (SRC, DEST, COLL, FIELD, qiniu, mongoose) {

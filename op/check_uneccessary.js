@@ -5,10 +5,10 @@
 var _ = require('underscore');
 
 module.exports = function(qiniu, mongoose){
-    check('yc-course-video', [{COLL:'Video', FIELD:'url'}], qiniu, mongoose);
+    //TODO: 需要判断video里面的problems.choices.video.url
+//    check('yc-course-video', [{COLL:'Video', FIELD:'url'}], qiniu, mongoose);
     check('yc-course', [
-        {COLL:'Chapter', FIELD:'icon'},
-        {COLL:'Activity', FIELD:'icon'}]
+        {COLL:'Chapter', FIELD:'icon'}]
         ,qiniu, mongoose);
 }
 

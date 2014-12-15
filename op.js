@@ -7,4 +7,6 @@
 module.exports = function (qiniu, mongoose) {
 //    require('./op/check_uneccessary')(qiniu,mongoose)
 //    require('./op/qiniu_copy')(qiniu,mongoose)
+//    require('./op/watermark')(qiniu,mongoose)
+//    require('./op/format_video')(qiniu,mongoose)
 }
