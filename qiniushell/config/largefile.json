@@ -1,0 +1,6 @@
+{
+    "src":          "/Users/3er/sources/yctool/sync",
+    "dest":         "qiniu:access_key=Ap-_6XBBOas4n-w-osaYig82pVft-v63Rdu_2lPV&secret_key=_GjKAqSVaeTlWv-YF8fu2sbQJUKpApG_tu7WRgS3&bucket=yc-test",
+    "deletable":    1,
+    "debug_level":  0
+}
