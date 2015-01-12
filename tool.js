@@ -35,7 +35,7 @@ var db = mongoose.connect(config.db, function (err) {
     // Demo
     //qiniuOp(qiniu, 'ghxz');
     //dbOp(mongoose);
-    web(app, port);
+    //web(app, port);
 });
 
 // express demo
